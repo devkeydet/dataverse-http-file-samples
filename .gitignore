@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Additions on top of the standard VisualStudio gitignore template
+.env
