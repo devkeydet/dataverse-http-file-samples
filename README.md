@@ -1,6 +1,6 @@
 # Sample Dataverse Solution showcasing using cdsproj as the driver of fusion development
 
-Samples of how to use the REST Client Extension to interact with the Dataverse API
+Samples of how to use the REST Client Extension for Visual Studio Code to interact with the Dataverse API
 
 * Install this Visual Studio Code extension https://marketplace.visualstudio.com/items?itemName=humao.rest-client
 * Install `az` cli (`winget install Microsoft.AzureCLI`)
