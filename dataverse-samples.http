@@ -1,0 +1,7 @@
+### WhoAmI
+GET {{$dotenv baseUrl}}/WhoAmI
+Authorization: Bearer {{$dotenv accessToken}}
+
+### Get all users
+GET {{$dotenv baseUrl}}/systemusers?$select=fullname,domainname
+Authorization: Bearer {{$dotenv accessToken}}
