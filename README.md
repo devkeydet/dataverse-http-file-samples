@@ -4,7 +4,7 @@ Samples of how to use the REST Client Extension for Visual Studio Code to intera
 
 * Install this Visual Studio Code extension https://marketplace.visualstudio.com/items?itemName=humao.rest-client
 * Install `az` cli (https://learn.microsoft.com/en-us/cli/azure/install-azure-cli or `winget install Microsoft.AzureCLI`)
-* use `az login` to login with the account that has permissions to the Dataverse environment
-* open this repo in Visual Studio Code
+* Use `az login` to login with the account that has permissions to the Dataverse environment
+* Open this repo in Visual Studio Code
 * Run the following in a PowerShell prompt in the root of this repo `.\create-or-update-env-file.ps1 -DataverseEnvironmentUrl https://your-environment-domain.crmX.dynamics.com`
 * Use the sample `dataverse-samples.http` file
