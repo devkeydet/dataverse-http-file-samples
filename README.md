@@ -1,4 +1,4 @@
-# Sample Dataverse Solution showcasing using cdsproj as the driver of fusion development
+# Sample .http files interacting with Dataverse
 
 Samples of how to use the REST Client Extension for Visual Studio Code to interact with the Dataverse Web API (https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview)
 
