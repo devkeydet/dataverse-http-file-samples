@@ -1,4 +1,4 @@
-# Samples of how to use the REST Client Extension for Visual Studio Code to interact with the Dataverse Web API
+# Sample .http files interacting with Dataverse
 
 Samples of how to use the REST Client Extension for Visual Studio Code to interact with the [Dataverse Web API](https://learn.microsoft.com/power-apps/developer/data-platform/webapi/overview)
 
