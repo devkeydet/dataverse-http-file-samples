@@ -1,6 +1,6 @@
 # Sample .http files interacting with Dataverse
 
-Samples of how to use the REST Client Extension for Visual Studio Code to interact with the Dataverse Web API (https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview)
+Samples of how to use the REST Client Extension for Visual Studio Code to interact with the [Dataverse Web API](https://learn.microsoft.com/power-apps/developer/data-platform/webapi/overview)
 
 * Install Visual Studio Code (https://code.visualstudio.com/download or `winget install Microsoft.VisualStudioCode`)
 * Install this Visual Studio Code extension https://marketplace.visualstudio.com/items?itemName=humao.rest-client
