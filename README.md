@@ -9,4 +9,4 @@ Samples of how to use the REST Client Extension for Visual Studio Code to intera
 * Clone or fork this repo
 * Open the cloned repo in Visual Studio Code
 * Run the following in a PowerShell prompt in the root of this repo `.\create-or-update-env-file.ps1 -DataverseEnvironmentUrl https://your-environment-domain.crmX.dynamics.com`
-* Use the sample `dataverse-samples.http` file
+* Use the sample `dataverse-samples.http` or `dataverse-samples-env-file.http` file depending on your preference
