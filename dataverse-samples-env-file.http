@@ -5,11 +5,12 @@
 GET {{$dotenv baseUrl}}/WhoAmI
 Authorization: Bearer {{$dotenv accessToken}}
 
-### Get all users
-GET {{$dotenv baseUrl}}/systemusers?$select=fullname,domainname,azureactivedirectoryobjectid
+### Get all users with domainname containing '@devkeydet.onmicrosoft.com'
+### and return fullname, domainname and azureactivedirectoryobject to keep the response small
+GET {{$dotenv baseUrl}}/systemusers?$filter=contains(domainname,'@devkeydet.onmicrosoft.com')&$select=fullname,domainname,azureactivedirectoryobjectid
 Authorization: Bearer {{$dotenv accessToken}}
 
-### Share a connection reference with another user using the GrantAccess action
+### Share connection reference with a user using the GrantAccess action
 POST {{$dotenv baseUrl}}/GrantAccess
 Authorization: Bearer {{$dotenv accessToken}}
 Content-Type: application/json

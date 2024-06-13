@@ -7,11 +7,12 @@
 GET {{baseUrl}}/WhoAmI
 Authorization: {{$aadToken 77f7d709-77d9-4511-9d3d-f33e5ea1c963}}
 
-### Get all users
+### Get all users with domainname containing '@devkeydet.onmicrosoft.com'
+### and return fullname, domainname and azureactivedirectoryobject to keep the response small
 GET {{baseUrl}}/systemusers?$filter=contains(domainname,'@devkeydet.onmicrosoft.com')&$select=fullname,domainname,azureactivedirectoryobjectid
 Authorization: {{$aadToken 77f7d709-77d9-4511-9d3d-f33e5ea1c963}}
 
-### GrantAccess to a connection reference
+### Share connection reference with a user using the GrantAccess action
 POST {{baseUrl}}/GrantAccess
 Authorization: {{$aadToken 77f7d709-77d9-4511-9d3d-f33e5ea1c963}}
 Content-Type: application/json
