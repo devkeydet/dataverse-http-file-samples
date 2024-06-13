@@ -1,0 +1,29 @@
+# This file depends on running the create-or-update-env-file.ps1 first to put the bearer token in the .env file 
+# This approach works in Visual Studio as well as in Visual Studio Code
+
+### WhoAmI
+GET {{$dotenv baseUrl}}/WhoAmI
+Authorization: Bearer {{$dotenv accessToken}}
+
+### Get all users
+GET {{$dotenv baseUrl}}/systemusers?$select=fullname,domainname,azureactivedirectoryobjectid
+Authorization: Bearer {{$dotenv accessToken}}
+
+### Share a connection reference with another user using the GrantAccess action
+POST {{$dotenv baseUrl}}/GrantAccess
+Authorization: Bearer {{$dotenv accessToken}}
+Content-Type: application/json
+
+{
+  "Target": {
+    "@odata.type": "Microsoft.Dynamics.CRM.connectionreference",
+    "connectionreferenceid": "your-guid"
+  },
+  "PrincipalAccess": {
+    "AccessMask": "ReadAccess",
+    "Principal": {
+      "@odata.type": "Microsoft.Dynamics.CRM.systemuser",
+      "systemuserid": "your-guid"
+    }
+  }
+}

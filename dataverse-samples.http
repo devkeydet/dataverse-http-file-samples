@@ -1,14 +1,19 @@
+# This file uses the built in $aadToken feature Visual Studio Code of REST Client extension
+# This approach does not work in Visual Studio
+
+@baseUrl = https://dkdt-dev-1.crm.dynamics.com/api/data/v9.2
+
 ### WhoAmI
-GET {{$dotenv baseUrl}}/WhoAmI
-Authorization: Bearer {{$dotenv accessToken}}
+GET {{baseUrl}}/WhoAmI
+Authorization: {{$aadToken 77f7d709-77d9-4511-9d3d-f33e5ea1c963}}
 
 ### Get all users
-GET {{$dotenv baseUrl}}/systemusers?$select=fullname,domainname
-Authorization: Bearer {{$dotenv accessToken}}
+GET {{baseUrl}}/systemusers?$filter=contains(domainname,'@devkeydet.onmicrosoft.com')&$select=fullname,domainname,azureactivedirectoryobjectid
+Authorization: {{$aadToken 77f7d709-77d9-4511-9d3d-f33e5ea1c963}}
 
 ### GrantAccess to a connection reference
-POST {{$dotenv baseUrl}}/GrantAccess
-Authorization: Bearer {{$dotenv accessToken}}
+POST {{baseUrl}}/GrantAccess
+Authorization: {{$aadToken 77f7d709-77d9-4511-9d3d-f33e5ea1c963}}
 Content-Type: application/json
 
 {
